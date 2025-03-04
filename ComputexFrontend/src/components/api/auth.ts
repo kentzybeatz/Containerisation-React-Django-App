@@ -1,13 +1,14 @@
 // auth.ts
 import axios from "axios";
 
-const BASE_URL = "http://13.48.123.217:8000";
+
+const BASE_URL = "http://13.51.44.50:8000";
 
 export const login = async (username: string, password: string) => {
   try {
     const response = await axios.post(`${BASE_URL}/user/login/`, {
       username,
-      password,
+   
     });
     return response.data;
   } catch (error) {
